@@ -72,6 +72,8 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.5.2)
+    font-awesome-rails (4.4.0.0)
+      railties (>= 3.2, < 5.0)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     grape (0.12.0)
@@ -205,6 +207,7 @@ PLATFORMS
 DEPENDENCIES
   bourbon
   byebug
+  font-awesome-rails
   grape
   hashie-forbidden_attributes
   jbuilder (~> 2.0)
