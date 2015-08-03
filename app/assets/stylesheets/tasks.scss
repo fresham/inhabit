@@ -1,0 +1,23 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.container {
+  @include outer-container;
+}
+
+.habit-box,.daily-box,.todo-box {
+  border: 1px solid #999;
+  @include border-top-radius(6px);
+  @include border-bottom-radius(6px);
+  min-height: 200px;
+  margin: 10px;
+  padding: 0px 10px;
+  @include span-columns(4);
+}

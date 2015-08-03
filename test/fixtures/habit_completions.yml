@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  habit_id: 
+  completed_at: 2015-08-02 23:30:13
+  success: false
+
+two:
+  habit_id: 
+  completed_at: 2015-08-02 23:30:13
+  success: false

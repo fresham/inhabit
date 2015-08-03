@@ -1,0 +1,5 @@
+<div class="container">
+  <%= react_component('HabitBox', {}, prerender: true) %>
+  <%= react_component('DailyBox', {}, prerender: true) %>
+  <%= react_component('TodoBox', {url: '/api/todos.json'}, prerender: true) %>
+</div>

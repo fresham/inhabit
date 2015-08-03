@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  daily_id: 
+  completed_at: 2015-08-02 23:34:17
+
+two:
+  daily_id: 
+  completed_at: 2015-08-02 23:34:17
