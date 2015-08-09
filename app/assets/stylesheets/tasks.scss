@@ -29,12 +29,12 @@ h1 {
   @include row;
 
   input {
-    @include span-columns(10);
+    @include span-columns(10, collapse);
     @include border-right-radius(0px);
-    margin-right: 0px;
   }
 
   button {
+    @include button(flat);
     @include span-columns(2);
     @include omega();
     @include border-left-radius(0px);
