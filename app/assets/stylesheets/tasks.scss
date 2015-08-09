@@ -1,23 +1,61 @@
-* {
+body {
   font-family: 'Open Sans', sans-serif;
   color: #333;
 }
 
 h1 {
   text-align: center;
-  text-decoration: underline;
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 12px;
+  margin-bottom: 16px;
 }
 
 .container {
-  @include outer-container;
+  @include outer-container(90%);
 }
 
 .habit-box,.daily-box,.todo-box {
   border: 1px solid #999;
+  background-color: #F2FAFF;
   @include border-top-radius(6px);
   @include border-bottom-radius(6px);
   min-height: 200px;
   margin: 10px;
-  padding: 0px 10px;
+  padding: 0px 24px 20px;
   @include span-columns(4);
+}
+
+.todo-form {
+  @include row;
+
+  input {
+    @include span-columns(10);
+    @include border-right-radius(0px);
+    margin-right: 0px;
+  }
+
+  button {
+    @include span-columns(2);
+    @include omega();
+    @include border-left-radius(0px);
+    font-size: 14px;
+    height: 36px;
+
+    i {
+      color: #eee;
+    }
+  }
+}
+
+.todo-list {
+  @include row;
+}
+
+.todo-item {
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background-color: white;
 }

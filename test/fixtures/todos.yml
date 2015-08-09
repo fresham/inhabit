@@ -1,9 +1,11 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  name: MyString
-  completed_at: 2015-08-02 23:23:26
+  name: Unfinished Task
+  completed_at: nil
 
 two:
-  name: MyString
-  completed_at: 2015-08-02 23:23:26
+  name: Recently Finished Task
+  completed_at: <%= 1.day.ago %>
+
+three:
+  name: Old Finished Task
+  completed_at: <%= 10.days.ago %>
