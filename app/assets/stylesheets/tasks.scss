@@ -58,3 +58,18 @@ h1 {
   padding: 8px 12px;
   background-color: white;
 }
+
+.todo-item-controls {
+  display: inline-block;
+  float: right;
+  color: #999;
+
+  i {
+    padding: 0px 2px;
+
+    &:hover {
+      cursor: pointer;
+      color: #333;
+    }
+  }
+}
