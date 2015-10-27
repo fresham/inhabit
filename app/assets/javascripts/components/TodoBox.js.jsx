@@ -1,11 +1,10 @@
 var TodoBox = React.createClass({
   render: function () {
     return (
-      <div className="todo-box">
-        <h1>To Do</h1>
+      <OverviewBox title="Todo">
         <TodoForm />
         <TodoList />
-      </div>
+      </OverviewBox>
     );
   }
 });
