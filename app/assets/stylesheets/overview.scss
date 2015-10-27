@@ -15,7 +15,7 @@ h1 {
   @include outer-container(90%);
 }
 
-.habit-box,.daily-box,.todo-box {
+.overview-box {
   border: 1px solid #999;
   background-color: #F2FAFF;
   border-radius: 6px;
