@@ -1,7 +1,5 @@
 class TasksController < ApplicationController
   def index
-    @habit_data = {}
-    @daily_data = {}
-    @todo_data = {}
+    render component: 'Overview'
   end
 end
