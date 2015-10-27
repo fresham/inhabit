@@ -6,4 +6,9 @@ class API < Grape::API
   get :ping do
     { ping: params[:pong] || "pong" }
   end
+
+  desc "Returns all todo items"
+  get :todos do
+    Todo.all
+  end
 end
