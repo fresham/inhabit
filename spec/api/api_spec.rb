@@ -12,7 +12,7 @@ describe API do
     let(:todos) { Array.new(3) {|i| double(Todo, name: "Todo #{i}")} }
 
     before :example do
-      expect(Todo).to receive(:all).and_return(todos)
+      allow(Todo).to receive(:all).and_return(todos)
       get '/api/v1/todos'
     end
 
@@ -26,6 +26,25 @@ describe API do
 
     it 'should return the correct number of todo items' do
       expect(JSON.parse(response.body).count).to eq(3)
+    end
+  end
+
+  describe 'DELETE /api/v1/todos/:id' do
+    let(:todo) { double(Todo, id: 1) }
+
+    before :example do
+      allow(Todo).to receive(:find).with(todo.id.to_s).and_return(todo)
+      allow(todo).to receive(:destroy)
+    end
+
+    it 'should respond with a 200' do
+      delete "/api/v1/todos/#{todo.id}"
+      expect(response.status).to eq(200)
+    end
+    
+    it 'should delete the todo item' do
+      expect(todo).to receive(:destroy)
+      delete "/api/v1/todos/#{todo.id}"
     end
   end
 end
