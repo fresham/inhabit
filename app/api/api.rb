@@ -12,7 +12,7 @@ class API < Grape::API
 
     desc 'Returns all todo items'
     get do
-      Todo.all
+      present Todo.all, with: Todo::Entity
     end
 
     desc 'Delete a todo item'
