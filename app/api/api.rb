@@ -1,14 +1,26 @@
 class API < Grape::API
-  prefix "api"
+  prefix :api
   format :json
 
-  desc "Returns pong"
+  desc 'Returns pong'
   get :ping do
-    { ping: params[:pong] || "pong" }
+    { ping: params[:pong] || 'pong' }
   end
 
-  desc "Returns all todo items"
-  get :todos do
-    Todo.all
+  resource :todos do
+    version :v1
+
+    desc 'Returns all todo items'
+    get do
+      Todo.all
+    end
+
+    desc 'Delete a todo item'
+    params do
+      requires :id, type: String, desc: 'Todo ID'
+    end
+    delete ':id' do
+      Todo.find(params[:id]).destroy
+    end
   end
 end
