@@ -25,9 +25,5 @@ module Inhabit
 
     # Default JS engine to plain .js
     config.generators.javascript_engine :js
-
-    # Grape
-    config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
-    config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
   end
 end
